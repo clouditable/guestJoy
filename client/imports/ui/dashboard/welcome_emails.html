@@ -1,0 +1,19 @@
+<template name="welcomeEmails">
+  <div data-target="#myModal" class="col-auto mb-3 d-flex align-items-stretch" data-toggle="modal" id="welcome-content">
+    {{#if showWelcomeChart}}
+    {{> chart data=data}}
+    {{else}}
+    <div class="card" style="width: 18rem;">
+      <div class="card-title text-center" style="background-color:pink">
+        Welcome emails
+      </div>
+      <div class="card-body">
+        <p class="card-text text-center">{{thisMonth}}</p>
+      </div>
+      <div class="card-footer down text-center">
+        {{{lastDifference}}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</template>

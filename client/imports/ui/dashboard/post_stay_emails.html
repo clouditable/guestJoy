@@ -1,0 +1,20 @@
+<template name="postStayEmails">
+  <div data-target="#myModal" data-toggle="modal" class="col-auto mb-3 d-flex align-items-stretch" id="post-stay-content">
+    {{#if showPostStayChart}}
+    {{> chart data=data}}
+    {{else}}
+    <div class="card" style="width: 18rem;">
+      <div class="card-title text-center" style="background-color:pink">
+        Post-stay emails
+      </div>
+      <div class="card-body">
+        <p class="card-text text-center">{{thisMonth}}</p>
+      </div>
+
+      <div class="card-footer down text-center">
+        {{{lastDifference}}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</template>
